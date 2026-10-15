@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #663344;
+    background: #fff0f5;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 13px 18px;
+    margin: 8px;
+    background: #ff80ab;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #f45b91;
+    transform: translateY(-2px);
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: linear-gradient(#fff0f5, #ffe0eb);
+}
+
+h1, h2 {
+    color: #e75480;
+}
+
+.hero h1 {
+    font-size: clamp(28px, 6vw, 48px);
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+#gallery {
+    min-height: 100vh;
+    padding: 50px 15px;
+    scroll-margin-top: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 200px));
+    justify-content: center;
+    gap: 15px;
+    margin: 25px auto;
+}
+
+.photo-card {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    background: white;
+    border: 2px solid #ffc0d5;
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(50, 20, 35, 0.65);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.popup.show {
+    display: flex;
+}
+
+.popup-content {
+    position: relative;
+    background: #fff8fb;
+    width: 100%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+#letterText {
+    white-space: pre-wrap;
+    text-align: left;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px 12px;
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.3;
+}
+
+#popupPhoto {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    max-height: 45vh;
+    object-fit: contain;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+.photo-content h2 {
+    padding: 0 25px;
+}
+
+#backToTop {
+    margin: 30px auto;
+}
+
+@media (max-width: 520px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 150px));
+        gap: 12px;
+    }
+
+    .popup-content {
+        padding: 22px 16px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}

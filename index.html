@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 3rd Monthsary ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <section id="home" class="hero">
+        <h1>Happy 3rd Monthsary, Baby! ❤️</h1>
+        <p>Three months with my favorite person 🥹</p>
+        <button id="openSurprise">Open 💌</button>
+    </section>
+
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- LETTER POPUP -->
+    <div id="letterPopup" class="popup">
+        <div class="popup-content">
+            <button class="close-btn" data-close="letterPopup">×</button>
+            <h2>Letter💌</h2>
+            <p id="letterText"></p>
+            <button type="button" id="continueButton">
+                Continue❤️
+            </button>
+        </div>
+    </div>
+
+    <!-- SIX PHOTO MEMORIES -->
+    <section id="gallery">
+        <h2>Little Memories 📸❤️</h2>
+        <p>Click each picture</p>
+
+        <div class="gallery">
+
+            <button class="photo-card"
+                data-title="Our Memory ❤️"
+                data-photo="photo1.jpg"
+                data-message="Favorite memories and first photo dungis kopa dito 😭❤️">
+                <img src="photo1.jpg" alt="Our memory 1">
+            </button>
+
+            <button class="photo-card"
+                data-title="My Favorite Person 🥹"
+                data-photo="photo2.jpg"
+                data-message="First bouquet HEHE more to come. ❤️">
+                <img src="photo2.jpg" alt="Our memory 2">
+            </button>
+
+            <button class="photo-card"
+                data-title="More Memories 💕"
+                data-photo="photo3.jpg"
+                data-message="Here's to more memories together, baby!">
+                <img src="photo3.jpg" alt="Our memory 3">
+            </button>
+
+            <button class="photo-card"
+                data-title="Always You ❤️"
+                data-photo="photo4.jpg"
+                data-message="Favorite and latest pic kasi, tamad kasi mag pic 🙄.">
+                <img src="photo4.jpg" alt="Our memory 4">
+            </button>
+
+            <button class="photo-card"
+                data-title="My Baby 🥹"
+                data-photo="photo5.jpg"
+                data-message="thank you po for everything. ❤️">
+                <img src="photo5.jpg" alt="Our memory 5">
+            </button>
+
+            <button class="photo-card"
+                data-title="More Months to Come 💗"
+                data-photo="photo6.jpg"
+                data-message="Happy 3rd monthsary! Here's to more chika, memories, and kalokohan together. 😭❤️">
+                <img src="photo6.jpg" alt="Our memory 6">
+            </button>
+
+        </div>
+
+        <button id="backToTop">Back to the Beginning 💗</button>
+    </section>
+
+    <!-- PHOTO MESSAGE POPUP -->
+    <div id="photoPopup" class="popup">
+        <div class="popup-content photo-content">
+            <button class="close-btn" data-close="photoPopup">×</button>
+            <h2 id="photoTitle"></h2>
+            <img id="popupPhoto" src="" alt="Selected memory">
+            <p id="photoMessage"></p>
+        </div>
+    </div>
+
+</body>
+</html>
